@@ -72,7 +72,7 @@ chain = prompt | llm | JsonOutputParser()
 @app.post("/ask")
 def ask_ai(question : Question):
     if not question.question.strip():
-        return "Question doesn't exist or you didn't type anything."
+        return "Question doesn't exist or you didn't type anything. Please type something before sending"
     
     result = chain.invoke({
         "restaurant_name" : restaurant["name"],
