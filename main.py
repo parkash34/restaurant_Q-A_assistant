@@ -1,5 +1,5 @@
 import os
-from pydantic import BaseModel
+from pydantic import BaseModel, validator
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from langchain_core.prompts import ChatPromptTemplate
@@ -18,6 +18,12 @@ app = FastAPI()
 
 class Question(BaseModel):
     question : str
+
+    @validator("question")
+    def question_not_empty(cls, v):
+        if not v.strip():
+            raise ValueError("Question cannot be empty")
+        return v
 
 llm = ChatGroq(
     model = "llama-3.3-70b-versatile",
@@ -71,9 +77,7 @@ chain = prompt | llm | JsonOutputParser()
 
 @app.post("/ask")
 def ask_ai(question : Question):
-    if not question.question.strip():
-        return "Question doesn't exist or you didn't type anything. Please type something before sending"
-    
+        
     result = chain.invoke({
         "restaurant_name" : restaurant["name"],
         "opening_hours" : restaurant["opening_hours"],
