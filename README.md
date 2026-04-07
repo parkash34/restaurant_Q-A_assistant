@@ -91,10 +91,12 @@ JsonOutputParser    →  converts AI response to Python dict
 Chain               →  prompt | llm | parser pipeline
 ```
 ## Restaurant Information
+```
 Name:          Bella Italia
 Location:      Astoria, New York
 Opening Hours: 12 PM to 11 PM
 Phone:         123-456-7890
+```
 
 ## Menu
 
