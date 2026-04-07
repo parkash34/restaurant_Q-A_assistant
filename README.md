@@ -38,20 +38,30 @@ safeguard/
 ## Setup
 
 1. Clone the repository
+```
 git clone https://github.com/yourusername/bella-italia-qa
+```
 
 2. Create and activate virtual environment
+```
 python -m venv env
 env\Scripts\activate
+```
 
 3. Install dependencies
+```
 pip install -r requirements.txt
+```
 
 4. Create `.env` file and add your Groq API key
+```
 API_KEY=your_groq_api_key_here
+```
 
 5. Run the server
+```
 uvicorn main:app --reload
+```
 
 ## API Endpoint
 
