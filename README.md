@@ -102,9 +102,9 @@ Phone:         123-456-7890
 
 | Category | Items |
 |---|---|
-| Pizzas | Margherita, Pepperoni, Vegetarian |
-| Pastas | Carbonara, Bolognese, Vegan Arrabbiata |
-| Desserts | Tiramisu, Gelato |
+| `Pizzas` | Margherita, Pepperoni, Vegetarian |
+| `Pastas` | Carbonara, Bolognese, Vegan Arrabbiata |
+| `Desserts` | Tiramisu, Gelato |
 
 ## Dietary Options
 
@@ -121,3 +121,7 @@ API_KEY=your_groq_api_key_here
 - Never commit your .env file to GitHub
 - Assistant only answers Bella Italia related questions
 - Unrelated questions return can_help: false
+
+## 👤 Author
+
+**Ohm Parkash** — [LinkedIn](https://www.linkedin.com/in/om-parkash34/) · [GitHub](https://github.com/parkash34)
