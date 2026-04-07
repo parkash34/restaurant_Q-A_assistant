@@ -27,9 +27,9 @@ chains and output parsers to build a structured restaurant assistant.
 
 ## Project Structure
 ```
-safeguard/
+project/
 │
-├── env/               
+├── .venv/               
 ├── main.py            
 ├── .env               
 └── requirements.txt   
@@ -84,12 +84,12 @@ uvicorn main:app --reload
 ```
 
 ## LangChain Concepts Used
-
+```
 ChatPromptTemplate  →  structured reusable prompt with variables
 ChatGroq            →  LangChain integration with Groq API
 JsonOutputParser    →  converts AI response to Python dict
 Chain               →  prompt | llm | parser pipeline
-
+```
 ## Restaurant Information
 Name:          Bella Italia
 Location:      Astoria, New York
