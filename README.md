@@ -26,12 +26,14 @@ chains and output parsers to build a structured restaurant assistant.
 | python-dotenv | Environment variable management |
 
 ## Project Structure
-week9-project/
+```
+safeguard/
 │
-├── env/
-├── main.py
-├── .env
-└── requirements.txt
+├── env/               
+├── main.py            
+├── .env               
+└── requirements.txt   
+```
 
 ## Setup
 
